@@ -3,8 +3,8 @@ import { AnimatePresence } from "motion/react";
 import "./App.css";
 import Layout from "./components/_layout";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import ThankYou from "./pages/ThankYou";
+// import Contact from "./pages/Contact";
+// import ThankYou from "./pages/ThankYou";
 import SplashScreen from "./components/custom/splashscreen/SplashScreen";
 import { usePageLoading } from "./hooks/usePageLoading";
 
@@ -21,8 +21,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/thank-you" element={<ThankYou />} />
+            {/* <Route path="/contact" element={<Contact />} />
+            <Route path="/thank-you" element={<ThankYou />} /> */}
           </Routes>
         </Layout>
       )}
