@@ -23,7 +23,7 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation
         <div className="hidden lg:flex items-center space-x-8 ">
           <div className="flex space-x-6">
             {NAVIGATION.map((item) => (
@@ -36,7 +36,7 @@ export default function Header() {
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Desktop Action Buttons */}
         <div className="hidden lg:flex items-center space-x-4">
@@ -50,7 +50,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <MobileNavigation />
+        {/* <MobileNavigation /> */}
       </nav>
     </header>
   );

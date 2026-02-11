@@ -3,7 +3,7 @@ import logoIcon from "@/assets/logo_icon_black.png";
 import { GRADIENT_ORBS } from "@/data/GradientOrbs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+import { Send } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden bg-white">
@@ -73,10 +73,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="text-md md:text-lg text-gray-600 mb-12 max-w-2xl mx-auto"
         >
-          Natsu Productions is a collaborative creative studio specializing in
-          music video editing, visual design, and custom music production. We
-          help artists transform their ideas into cinematic experiences that
-          connect with audiences.
+          Natsu Productions is a collaborative anime-inspired creative studio.
+          Our team unites distinct artistic voices under one cohesive creative
+          direction, delivering high-quality video editing, visual design, and
+          music production.
         </motion.p>
 
         <motion.div
@@ -90,7 +90,10 @@ export default function Hero() {
             size="lg"
             className="text-base px-8  bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer"
           >
-            <Link to="/quote">Request a Quote</Link>
+            <Link to="#quote">
+              Request a Quote
+              <Send className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
           <Button
             asChild
