@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { navigation } from "@/data/navigation";
+import { Navigation } from "@/data/Navigation";
 import logo from "@/assets/logo.png";
 import MobileNavigation from "./MobileNavigation";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
-    <header>
+    <header className="sticky top-0 z-50 bg-white ">
       <nav className="w-full h-20 bg-white flex items-center justify-between px-4 lg:px-40 ">
         {/* Logo */}
         <Link
@@ -17,13 +18,15 @@ export default function Header() {
             alt="Natsu Productions Logo - Navigate to Homepage"
             className="h-8 w-auto"
             loading="lazy"
+            onContextMenu={(e) => e.preventDefault()}
+            onDragStart={(e) => e.preventDefault()}
           />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8 ">
           <div className="flex space-x-6">
-            {navigation.map((item) => (
+            {Navigation.map((item) => (
               <Link
                 key={item.tag}
                 to={item.href}
@@ -37,12 +40,13 @@ export default function Header() {
 
         {/* Desktop Action Buttons */}
         <div className="hidden lg:flex items-center space-x-4">
-          <button
-            className="rounded-lg  px-4 py-2 bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer"
+          <Button
+            variant="default"
+            className="rounded-lg px-4 py-2 bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer"
             aria-label="Get A Quote"
           >
             Get a Quote
-          </button>
+          </Button>
         </div>
 
         {/* Mobile Menu */}
