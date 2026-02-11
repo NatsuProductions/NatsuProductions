@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Navigation } from "@/data/Navigation";
+import { NAVIGATION } from "@/data/Navigation";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function MobileNavigation() {
@@ -96,7 +96,7 @@ export default function MobileNavigation() {
                 </div>
                 {/* Navigation Links */}
                 <nav className="flex flex-col space-y-4 px-6 py-4">
-                  {Navigation.map((item, index) => (
+                  {NAVIGATION.map((item, index) => (
                     <motion.div
                       key={item.tag}
                       initial={{ opacity: 0, x: 20 }}

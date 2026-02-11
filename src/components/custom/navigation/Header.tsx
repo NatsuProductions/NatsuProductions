@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Navigation } from "@/data/Navigation";
+import { NAVIGATION } from "@/data/Navigation";
 import logo from "@/assets/logo.png";
 import MobileNavigation from "./MobileNavigation";
 import { Button } from "@/components/ui/button";
@@ -26,7 +26,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8 ">
           <div className="flex space-x-6">
-            {Navigation.map((item) => (
+            {NAVIGATION.map((item) => (
               <Link
                 key={item.tag}
                 to={item.href}

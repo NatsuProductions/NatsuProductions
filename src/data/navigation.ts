@@ -1,4 +1,4 @@
-export const Navigation = [
+export const NAVIGATION = [
   {
     tag: "Home",
     href: "/",
