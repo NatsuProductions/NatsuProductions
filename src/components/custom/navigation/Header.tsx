@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { NAVIGATION } from "@/data/Navigation";
+// import { NAVIGATION } from "@/data/Navigation";
 import logo from "@/assets/logo.png";
-import MobileNavigation from "./MobileNavigation";
+// import MobileNavigation from "./MobileNavigation";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {

@@ -5,7 +5,7 @@ import Layout from "./components/_layout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
-import SplashScreen from "./components/SplashScreen";
+import SplashScreen from "./components/custom/splashscreen/SplashScreen";
 import { usePageLoading } from "./hooks/usePageLoading";
 
 function App() {
