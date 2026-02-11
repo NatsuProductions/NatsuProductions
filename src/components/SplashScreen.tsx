@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import logo from "@/assets/logo.png";
+import logoIcon from "@/assets/logo_icon_black.png";
 
 export default function SplashScreen() {
   return (
@@ -12,13 +12,13 @@ export default function SplashScreen() {
       <div className="flex flex-col items-center gap-6">
         {/* Animated Logo */}
         <motion.img
-          src={logo}
+          src={logoIcon}
           alt="Natsu Productions"
           className="h-20 w-auto"
-          initial={{ scale: 0.5, opacity: 0 }}
+          initial={{ scale: 0.3, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{
-            duration: 0.5,
+            duration: 0.7,
             ease: "easeOut",
           }}
           onContextMenu={(e) => e.preventDefault()}
