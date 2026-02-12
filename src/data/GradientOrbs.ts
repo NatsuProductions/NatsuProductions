@@ -39,4 +39,28 @@ export const GRADIENT_ORBS = [
     size: "500px",
     duration: 23,
   },
+  {
+    id: 6,
+    colors: ["#FF9A9E", "#FAD0C4"], // Light Pink to Peach
+    left: "40%",
+    top: "80%",
+    size: "400px",
+    duration: 19,
+  },
+  {
+    id: 7,
+    colors: ["#FFD66F", "#FF6B35"], // Gold to Orange
+    left: "15%",
+    top: "50%",
+    size: "480px",
+    duration: 24,
+  },
+  {
+    id: 8,
+    colors: ["#6366F1", "#EC4899"], // Indigo to Pink
+    left: "80%",
+    top: "30%",
+    size: "520px",
+    duration: 21,
+  },
 ];

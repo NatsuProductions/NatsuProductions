@@ -1,41 +1,13 @@
 import { motion } from "motion/react";
 import logoIcon from "@/assets/logo_icon_black.png";
-import { GRADIENT_ORBS } from "@/data/GradientOrbs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Send } from "lucide-react";
 export default function Hero() {
   return (
-    <section className="relative h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden bg-white">
-      {/* Gradient Orbs */}
-      <div className="absolute inset-0">
-        {GRADIENT_ORBS.map((orb) => (
-          <motion.div
-            key={orb.id}
-            className="absolute rounded-full blur-3xl opacity-30"
-            style={{
-              left: orb.left,
-              top: orb.top,
-              width: orb.size,
-              height: orb.size,
-              background: `radial-gradient(circle, ${orb.colors[0]}, ${orb.colors[1]}, transparent)`,
-              transform: "translate(-50%, -50%)",
-            }}
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.2, 0.35, 0.2],
-            }}
-            transition={{
-              duration: orb.duration,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
-
+    <section className="relative h-[calc(110vh-5rem)] flex items-center justify-center ">
       {/* Subtle overlay for depth */}
-      <div className="absolute inset-0 bg-linear-to-b from-white/10 via-transparent to-white/20" />
+      {/* <div className="absolute inset-0 bg-linear-to-b from-white/10 via-transparent to-white/20" /> */}
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
@@ -88,7 +60,7 @@ export default function Hero() {
           <Button
             asChild
             size="lg"
-            className="text-base px-8  bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer"
+            className="text-base px-8 w-48 bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer"
           >
             <Link to="#quote">
               Request a Quote
@@ -99,7 +71,7 @@ export default function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="text-base px-8"
+            className="text-base px-8 w-48"
           >
             <Link to="#services">View Services</Link>
           </Button>

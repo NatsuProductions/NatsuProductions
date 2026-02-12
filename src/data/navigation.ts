@@ -5,13 +5,13 @@ export const NAVIGATION = [
     title: "Home",
   },
   {
-    tag: "Services",
-    href: "/services",
-    title: "Services",
+    tag: "Works",
+    href: "/#works",
+    title: "Works",
   },
   {
-    tag: "Works",
-    href: "/works",
-    title: "Works",
+    tag: "Services",
+    href: "/#services",
+    title: "Services",
   },
 ];
