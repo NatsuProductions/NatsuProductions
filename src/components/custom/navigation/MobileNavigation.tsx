@@ -9,6 +9,16 @@ export default function MobileNavigation() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute("href");
+    if (href?.startsWith("#")) {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: "smooth" });
+      closeMenu();
+    }
+  };
+
   return (
     <div className="lg:hidden">
       {/* Hamburger Button */}
@@ -104,14 +114,23 @@ export default function MobileNavigation() {
                       exit={{ opacity: 0, x: 20 }}
                       transition={{ delay: index * 0.1, duration: 0.3 }}
                     >
-                      <Link
-                        key={item.tag}
-                        to={item.href}
-                        onClick={closeMenu}
-                        className="text-lg text-gray-600 hover:text-gray-900 transition-colors py-2"
-                      >
-                        {item.title}
-                      </Link>
+                      {item.href.startsWith("#") ? (
+                        <a
+                          href={item.href}
+                          onClick={handleHashClick}
+                          className="text-lg text-gray-600 hover:text-gray-900 transition-colors py-2"
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.href}
+                          onClick={closeMenu}
+                          className="text-lg text-gray-600 hover:text-gray-900 transition-colors py-2"
+                        >
+                          {item.title}
+                        </Link>
+                      )}
                     </motion.div>
                   ))}
                 </nav>

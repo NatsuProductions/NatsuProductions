@@ -5,16 +5,18 @@ import MainService from "@/components/custom/services/MainService";
 import QuickRequestService from "@/components/custom/services/QuickRequestService";
 import SupportingService from "@/components/custom/services/SupportingService";
 // import FeaturedExamples from "@/components/custom/services/FeaturedExamples";
+import Process from "@/components/custom/process/Process";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      {/* <WorkShowcase /> */}
+      <WorkShowcase />
       <MainService />
       <QuickRequestService />
       <SupportingService />
       {/* <FeaturedExamples /> */}
+      <Process />
     </>
   );
 }

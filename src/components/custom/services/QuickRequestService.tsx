@@ -36,7 +36,7 @@ export default function QuickRequestService() {
         "Fast, streamlined editing designed for creators who need efficient turnaround with simplified production scope."
       }
       cards={cards}
-      cardClassName="rounded-lg p-4 md:p-5 bg-white backdrop-blur-lg border border-white/30 shadow hover:shadow-lg transition-all flex flex-col items-center text-center text-base md:text-base min-h-0"
+      cardClassName="rounded-lg p-4 md:p-5 bg-white/40 backdrop-blur-xl border border-white/30 shadow-lg hover:shadow-2xl transition-all flex flex-col items-center text-center text-base md:text-base min-h-0"
     />
   );
 }

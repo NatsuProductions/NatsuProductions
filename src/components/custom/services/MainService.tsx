@@ -33,6 +33,7 @@ export default function MainService() {
       }
       cards={cards}
       headerClassName="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-2 text-center"
+      sectionId="services"
     />
   );
 }

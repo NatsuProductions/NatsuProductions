@@ -7,10 +7,10 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative min-h-screen flex flex-col w-full overflow-hidden">
+    <div className="relative min-h-screen flex flex-col w-full ">
       <Header />
       <BackgroundOrbs />
-      <main className="relative z-10 flex-1 ">{children}</main>
+      <main className="relative z-10 flex-1">{children}</main>
     </div>
   );
 }

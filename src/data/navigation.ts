@@ -1,17 +1,17 @@
 export const NAVIGATION = [
   {
     tag: "Home",
-    href: "/",
+    href: "#hero",
     title: "Home",
   },
   {
     tag: "Works",
-    href: "/#works",
+    href: "#work",
     title: "Works",
   },
   {
     tag: "Services",
-    href: "/#services",
+    href: "#services",
     title: "Services",
   },
 ];

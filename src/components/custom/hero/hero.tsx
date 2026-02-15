@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 import { Send } from "lucide-react";
 export default function Hero() {
   return (
-    <section className="relative h-[calc(110vh-5rem)] flex items-center justify-center ">
+    <section
+      className="relative min-h-screen pt-20 flex items-center justify-center"
+      id="hero"
+    >
       {/* Subtle overlay for depth */}
       {/* <div className="absolute inset-0 bg-linear-to-b from-white/10 via-transparent to-white/20" /> */}
 

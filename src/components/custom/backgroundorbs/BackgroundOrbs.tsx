@@ -3,7 +3,7 @@ import { GRADIENT_ORBS } from "@/data/GradientOrbs";
 
 export default function BackgroundOrbs() {
   return (
-    <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {GRADIENT_ORBS.map((orb) => (
         <motion.div
           key={orb.id}
