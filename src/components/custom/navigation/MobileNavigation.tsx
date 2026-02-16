@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { NAVIGATION } from "@/data/Navigation";
 import { motion, AnimatePresence } from "motion/react";
+import logo from "@/assets/logo.png";
 
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function MobileNavigation() {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden bg-white">
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
@@ -73,32 +74,41 @@ export default function MobileNavigation() {
               }}
               className="fixed top-0 right-0 w-2/3 sm:w-3/4 md:w-2/3 lg:w-1/2 h-full bg-white shadow-lg z-50"
             >
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full ">
                 {/* Close Button */}
-                <div className="flex justify-end p-4">
-                  <button
-                    onClick={closeMenu}
-                    className="p-2 text-gray-600 hover:text-gray-900"
-                    aria-label="Close menu"
-                  >
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                <div className="flex justify-evenly p-4 space-x-12">
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={logo}
+                      alt="Natsu Productions Logo"
+                      className="h-8 w-auto"
+                    />
+                  </div>
+                  <div className="flex justify-end">
+                    <button
+                      onClick={closeMenu}
+                      className="p-2 text-gray-600 hover:text-gray-900"
+                      aria-label="Close menu"
                     >
-                      <path d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
                 {/* Action Button */}
                 <div className="px-6 py-4 ">
                   <button
                     onClick={closeMenu}
-                    className="w-full rounded-lg px-4 py-3 bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer"
+                    className="rounded-md py-2 px-4  bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer w-full"
                     aria-label="Get A Quote"
                   >
                     Get a Quote

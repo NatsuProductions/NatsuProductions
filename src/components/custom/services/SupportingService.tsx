@@ -15,7 +15,10 @@ export default function SupportingService() {
         <div className="flex items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center w-full lg:w-3/4">
             {SUPPORT_CARDS.map((card) => (
-              <div className="rounded-lg p-4 md:p-5 bg-white/40 backdrop-blur-xl border border-white/30 shadow-lg hover:shadow-2xl transition-all flex flex-col items-center text-center text-base md:text-base min-h-0 ">
+              <div
+                className="rounded-lg p-4 md:p-5 bg-white/40 backdrop-blur-xl border border-white/30 shadow-lg hover:shadow-2xl transition-all flex flex-col items-center text-center text-base md:text-base min-h-0 "
+                key={card.id}
+              >
                 {/* Image placeholder */}
                 {/* <div className="w-full h-60 mb-4 flex items-center justify-center rounded-t-md overflow-hidden">
                 <img

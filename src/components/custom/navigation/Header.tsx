@@ -14,8 +14,8 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-50 bg-white/80 backdrop-blur-md w-full">
-      <nav className="w-full h-20 flex items-center justify-between px-4 lg:px-40 ">
+    <header className="fixed top-0 z-50 bg-white w-full">
+      <nav className="w-full h-20 flex items-center justify-between px-4 lg:px-40  ">
         {/* Logo */}
         <Link
           to="/"

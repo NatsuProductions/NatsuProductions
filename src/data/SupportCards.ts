@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 export interface SupportCardData {
+  id: number;
   imageAlt: string;
   title: string;
   description: string;
@@ -14,6 +15,7 @@ export interface SupportCardData {
 
 export const SUPPORT_CARDS: SupportCardData[] = [
   {
+    id: 1,
     imageAlt: "Visual Design & Illustration Example",
     title: "Visual Design & Illustration",
     description: "Artwork created to elevate storytelling and identity.",
@@ -27,6 +29,7 @@ export const SUPPORT_CARDS: SupportCardData[] = [
     buttonLink: "https://natsuproductions.com/contact",
   },
   {
+    id: 2,
     imageAlt: "Audio Production & Sound Design Example",
     title: "Audio Production & Mixing",
     description: "Professional sound tailored for music video presentation.",
