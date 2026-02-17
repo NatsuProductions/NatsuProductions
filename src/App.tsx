@@ -21,8 +21,8 @@ import Layout from "./components/_layout";
 import Home from "./pages/Home";
 import SplashScreen from "./components/custom/splashscreen/SplashScreen";
 import { usePageLoading } from "./hooks/usePageLoading";
-import PrivacyPolicy from "./components/custom/privacypolicy/PrivacyPolicy";
-import TermsOfService from "./components/custom/termsofservice/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import QuoteForm from "./pages/QuoteForm";
 
 function App() {

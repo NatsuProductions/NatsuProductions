@@ -9,7 +9,6 @@ import {
   Award,
   UserCheck,
   Gavel,
-  Mail,
 } from "lucide-react";
 
 export default function TermsOfService() {
@@ -483,29 +482,6 @@ export default function TermsOfService() {
               </p>
             </div>
           </section>
-
-          {/* Contact Footer */}
-          <footer className="pt-20 text-center">
-            <div className="p-12 bg-slate-900 dark:bg-slate-900/50 rounded-2xl text-white">
-              <h3 className="text-2xl md:text-3xl font-black mb-4 italic tracking-tighter uppercase">
-                Ready to <span className="text-blue-600">Commit?</span>
-              </h3>
-              <p className="text-slate-400 text-sm mb-10 max-w-sm mx-auto">
-                By using our services, you acknowledge you have read and agreed
-                to these Terms of Service.
-              </p>
-              <a
-                href="mailto:72natsu.productions@gmail.com"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 transition-all rounded-lg font-bold shadow-xl shadow-blue-900/20"
-              >
-                <Mail className="w-5 h-5" />
-                72natsu.productions@gmail.com
-              </a>
-            </div>
-            <p className="mt-8 text-xs text-slate-500 uppercase tracking-widest">
-              &copy; 2026 Natsu Productions Studio. All Rights Reserved.
-            </p>
-          </footer>
         </div>
       </div>
     </section>
