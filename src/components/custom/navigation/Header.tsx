@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { NAVIGATION } from "@/data/Navigation";
 import logo from "@/assets/logo.png";
 import MobileNavigation from "./MobileNavigation";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -54,12 +55,12 @@ export default function Header() {
             )}
 
             {/* Desktop Action Buttons */}
-            <button
+            <Button
               className="rounded-md py-2 px-4  bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer"
               aria-label="Get A Quote"
             >
-              Get a Quote
-            </button>
+              <Link to="/quote-form">Get a Quote</Link>
+            </Button>
           </div>
         </div>
 

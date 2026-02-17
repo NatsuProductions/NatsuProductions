@@ -1,0 +1,57 @@
+export const QUOTE_FORM_FIELDS = [
+  {
+    name: "name",
+    type: "text",
+    label: "Name",
+    placeholder: "Enter your name",
+    required: true,
+  },
+  {
+    name: "email",
+    type: "email",
+    label: "Email Address",
+    placeholder: "Enter your email",
+    required: true,
+  },
+  {
+    name: "description",
+    type: "textarea",
+    label: "Brief Description",
+    placeholder: "Describe your project",
+    required: true,
+  },
+  {
+    name: "date",
+    type: "date",
+    label: "Desired Completion Date",
+    placeholder: "",
+    required: true,
+  },
+  {
+    name: "budget",
+    type: "text",
+    label: "Estimated Budget",
+    placeholder: "Enter your budget",
+    required: true,
+  },
+  {
+    name: "drive",
+    type: "url",
+    label: "Google Drive Link",
+    placeholder: "https://drive.google.com/...",
+    required: false,
+  },
+  {
+    name: "coupon",
+    type: "text",
+    label: "Coupon Code",
+    placeholder: "Enter code if you have one",
+    required: false,
+  },
+  {
+    name: "agree",
+    type: "checkbox",
+    label: "I understand and agree",
+    required: true,
+  },
+];

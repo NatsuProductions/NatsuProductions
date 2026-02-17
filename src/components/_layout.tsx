@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Header from "./custom/navigation/Header";
 import BackgroundOrbs from "./custom/backgroundorbs/BackgroundOrbs";
-import Footer from "./custom/Footer/Footer";
+import Footer from "./custom/footer/Footer";
 interface LayoutProps {
   children: ReactNode;
 }

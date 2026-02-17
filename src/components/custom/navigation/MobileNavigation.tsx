@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { NAVIGATION } from "@/data/Navigation";
 import { motion, AnimatePresence } from "motion/react";
 import logo from "@/assets/logo.png";
+import { Button } from "@/components/ui/button";
 
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -106,13 +107,13 @@ export default function MobileNavigation() {
                 </div>
                 {/* Action Button */}
                 <div className="px-6 py-4 ">
-                  <button
+                  <Button
                     onClick={closeMenu}
                     className="rounded-md py-2 px-4  bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer w-full"
                     aria-label="Get A Quote"
                   >
-                    Get a Quote
-                  </button>
+                    <Link to="/quote-form">Get a Quote</Link>
+                  </Button>
                 </div>
                 {/* Navigation Links */}
                 <nav className="flex flex-col space-y-4 px-6 py-4">

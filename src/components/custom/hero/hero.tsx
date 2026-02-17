@@ -65,7 +65,7 @@ export default function Hero() {
             size="lg"
             className="text-base px-8 w-48 bg-linear-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all cursor-pointer"
           >
-            <Link to="#quote">
+            <Link to="/quote-form">
               Request a Quote
               <Send className="ml-2 h-4 w-4" />
             </Link>
