@@ -26,7 +26,7 @@ import TermsOfService from "./components/custom/termsofservice/TermsOfService";
 import QuoteForm from "./pages/QuoteForm";
 
 function App() {
-  const isLoading = usePageLoading(1500); // 1.5 seconds minimum
+  const isLoading = usePageLoading(1500);
 
   return (
     <>
@@ -34,7 +34,17 @@ function App() {
         {isLoading && <SplashScreen key="splash" />}
       </AnimatePresence>
 
-      {!isLoading && (
+      {/* SEO FIX: Always render the Layout so bots can "read" the DOM 
+         immediately. We use a style trick to hide it visually from 
+         users if necessary, or just let the Splash cover it.
+      */}
+      <div
+        style={{
+          visibility: isLoading ? "hidden" : "visible",
+          height: isLoading ? 0 : "auto",
+          overflow: "hidden",
+        }}
+      >
         <Layout>
           <ScrollToHash />
           <Routes>
@@ -48,7 +58,7 @@ function App() {
             />
           </Routes>
         </Layout>
-      )}
+      </div>
     </>
   );
 }
