@@ -11,20 +11,17 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: "Bad Apple!! ／ 東方 (Touhou) Project Amai Konpeito -Remix-",
+    title: "No Feeling - Miyamai Moca",
     videoUrl: "https://www.youtube.com/embed/Rurw4CE85PQ",
   },
   {
     id: 4,
     title: "Shine On (First Original Song)",
-    videoUrl: "https://www.youtube.com/embed/mxaFATd6SSw",
+    videoUrl: "https://www.youtube.com/embed/OektsmDC_Ww",
   },
   {
     id: 5,
-    title:
-      "花になって (Be A Flower) ／ Ryokuoushoku Shakai Amai Konpeito cover",
-    description:
-      "A brief description of Project Five. This project demonstrates our ability to blend artistic vision with technical skill to create memorable experiences.",
-    videoUrl: "https://www.youtube.com/embed/LuB1IyHnSFQ",
+    title: "【Original MV】Deck The Halls LucaScale Vers. Ft. Teto",
+    videoUrl: "https://www.youtube.com/watch?v=XaIZ4MUNimE",
   },
 ];
