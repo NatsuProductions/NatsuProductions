@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import Hero from "@/components/custom/hero/Hero";
+import Hero from "@/components/custom/hero/hero";
 import WorkShowcase from "@/components/custom/showcase/WorkShowcase";
 import MainService from "@/components/custom/services/MainService";
 import QuickRequestService from "@/components/custom/services/QuickRequestService";
