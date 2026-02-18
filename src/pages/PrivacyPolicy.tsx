@@ -1,3 +1,4 @@
+import Closing from "@/components/custom/closing/Closing";
 import { ShieldCheck, Scale } from "lucide-react";
 
 export default function PrivacyPolicy() {
@@ -172,6 +173,7 @@ export default function PrivacyPolicy() {
             </div>
           </section>
         </div>
+        <Closing />
       </div>
     </section>
   );

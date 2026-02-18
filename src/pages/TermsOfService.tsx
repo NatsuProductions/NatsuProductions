@@ -1,3 +1,4 @@
+import Closing from "@/components/custom/closing/Closing";
 import {
   FileCheck,
   CreditCard,
@@ -483,6 +484,7 @@ export default function TermsOfService() {
             </div>
           </section>
         </div>
+        <Closing />
       </div>
     </section>
   );

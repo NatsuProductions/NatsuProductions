@@ -6,6 +6,7 @@ import QuickRequestService from "@/components/custom/services/QuickRequestServic
 import SupportingService from "@/components/custom/services/SupportingService";
 // import FeaturedExamples from "@/components/custom/services/FeaturedExamples";
 import Process from "@/components/custom/process/Process";
+import Closing from "@/components/custom/closing/Closing";
 export default function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function Home() {
       <SupportingService />
       {/* <FeaturedExamples /> */}
       <Process />
+      <Closing />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { Send } from "lucide-react";
 
 export default function Closing() {
   return (
-    <section className="pb-10 px-6 bg-white text-white overflow-hidden relative flex items-center justify-center ">
+    <section className="pb-10 px-6  text-white overflow-hidden relative flex items-center justify-center ">
       <div className="pt-20 text-center max-w-4xl w-full ">
         <div className="p-12 bg-slate-900 dark:bg-slate-900/50 rounded-2xl text-white">
           <h3 className="text-2xl md:text-3xl font-black mb-4 italic tracking-tighter uppercase">
