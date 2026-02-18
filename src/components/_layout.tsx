@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
-import Header from "./custom/navigation/Header";
-import BackgroundOrbs from "./custom/backgroundorbs/BackgroundOrbs";
-import Footer from "./custom/footer/Footer";
-import Closing from "./custom/closing/Closing";
+import Header from "@/components/custom/navigation/Header";
+import BackgroundOrbs from "@/components/custom/backgroundorbs/BackgroundOrbs";
+import Footer from "@/components/custom/footer/Footer";
+import Closing from "@/components/custom/closing/Closing";
 interface LayoutProps {
   children: ReactNode;
 }
