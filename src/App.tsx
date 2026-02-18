@@ -15,50 +15,47 @@ function ScrollToHash() {
   }, [hash]);
   return null;
 }
-import { AnimatePresence } from "motion/react";
+// import { AnimatePresence } from "motion/react";
 import "./App.css";
 import Layout from "./components/_layout";
 import Home from "./pages/Home";
-import SplashScreen from "./components/custom/splashscreen/SplashScreen";
-import { usePageLoading } from "./hooks/usePageLoading";
+// import SplashScreen from "./components/custom/splashscreen/SplashScreen";
+// import { usePageLoading } from "./hooks/usePageLoading";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import QuoteForm from "./pages/QuoteForm";
 
 function App() {
-  const isLoading = usePageLoading(1500);
+  // const isLoading = usePageLoading(1500);
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {isLoading && <SplashScreen key="splash" />}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       {/* SEO FIX: Always render the Layout so bots can "read" the DOM 
          immediately. We use a style trick to hide it visually from 
          users if necessary, or just let the Splash cover it.
       */}
-      <div
+      {/* <div
         style={{
           visibility: isLoading ? "hidden" : "visible",
           height: isLoading ? 0 : "auto",
           overflow: "hidden",
         }}
-      >
-        <Layout>
-          <ScrollToHash />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/quote-form" element={<QuoteForm />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route
-              path="/work-with-us"
-              element={<div>Work With Us Page</div>}
-            />
-          </Routes>
-        </Layout>
-      </div>
+      > */}
+      <Layout>
+        <ScrollToHash />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quote-form" element={<QuoteForm />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/work-with-us" element={<div>Work With Us Page</div>} />
+        </Routes>
+      </Layout>
+      {/* </div> */}
     </>
   );
 }
