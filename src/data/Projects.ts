@@ -11,12 +11,12 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: "No Feeling - Miyamai Moca",
+    title: "Bad Apple!! ／Amai Konpeito (Touhou Project) -Remix-",
     videoUrl: "https://www.youtube.com/embed/Rurw4CE85PQ",
   },
   {
     id: 4,
-    title: "Shine On (First Original Song)",
+    title: "No Feeling - Miyamai Moca",
     videoUrl: "https://www.youtube.com/embed/OektsmDC_Ww",
   },
   {
