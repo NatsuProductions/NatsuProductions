@@ -22,6 +22,6 @@ export const PROJECTS = [
   {
     id: 5,
     title: "【Original MV】Deck The Halls LucaScale Vers. Ft. Teto",
-    videoUrl: "https://www.youtube.com/watch?v=XaIZ4MUNimE",
+    videoUrl: "https://www.youtube.com/embed/XaIZ4MUNimE",
   },
 ];
