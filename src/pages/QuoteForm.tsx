@@ -180,9 +180,9 @@ export default function QuoteForm() {
                                   : ""
                               }`}
                             />
-                            {fieldData.type === "date" && (
+                            {/* {fieldData.type === "date" && (
                               <CalendarIcon className="absolute right-3 top-3 h-5 w-5 text-slate-400 pointer-events-none" />
-                            )}
+                            )} */}
                           </div>
                         )}
                       </FieldContent>
