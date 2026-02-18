@@ -161,7 +161,7 @@ export default function QuoteForm() {
                             id={fieldData.name}
                             {...form.register(fieldKey)}
                             placeholder={fieldData.placeholder}
-                            className={`min-h-[120px] resize-y bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 transition-all duration-200 focus:bg-white dark:focus:bg-slate-900 focus:ring-2 focus:ring-blue-500/20 ${
+                            className={`min-h-30 resize-y bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 transition-all duration-200 focus:bg-white dark:focus:bg-slate-900 focus:ring-2 focus:ring-blue-500/20 ${
                               error
                                 ? "border-red-500 focus-visible:ring-red-200"
                                 : ""
