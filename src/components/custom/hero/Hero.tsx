@@ -17,7 +17,7 @@ export default function Hero() {
           <motion.img
             src={logoIcon}
             alt="Natsu Productions Logo"
-            className="h-32 w-auto mx-auto mb-10 drop-shadow-xl"
+            className="h-60 w-auto mx-auto  drop-shadow-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
