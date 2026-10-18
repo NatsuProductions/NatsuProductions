@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Natsu Productions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend-only music video studio funnel for VTubers, Utaites, and independent artists. React, TypeScript, Vite, Tailwind, Motion, React Hook Form, and Zod. No backend, serverless functions, or database are required.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm ci
+npm run dev
+npm run build
+npm run lint
+node --experimental-strip-types --test tests/inquiry.test.mjs
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Use Node 22.18+ for the native TypeScript validation tests. Production output is the static `dist` directory; `npm run preview` previews it locally.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Inquiry setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Set `VITE_DISCORD_WEBHOOK_URL` in `.env`, using [.env.example](./.env.example) as a reference. Restart Vite after changing environment variables. On your hosting platform, set the same build-time variable and rebuild.
+
+The browser posts directly to Discord. There is no `/api/inquiry` endpoint. Discord's successful empty 204 response is accepted, along with other successful HTTP statuses. Mentions are disabled in the submitted message. Validation, sending feedback, success confirmation, and error states are handled in the frontend. Failed submissions preserve the brief.
+
+As in the original frontend-only integration, the webhook URL is visible in browser requests and the built application. Client validation is for user experience; it is not a server-side security boundary. No live Discord messages are sent by automated checks. A retry after an ambiguous network timeout may duplicate a delivered inquiry.
+
+## Architecture
+
+- [App.tsx](./src/App.tsx): routing, lazy legal pages, reduced motion, and route/hash scrolling.
+- [StudioLayout](./src/components/StudioLayout.tsx): navigation, mobile disclosure, skip link, and footer.
+- [Studio feature](./src/features/studio/): hero, work, services, process, testimonials, FAQ, and inquiry composition.
+- [Inquiry feature](./src/features/inquiry/): shared form for the homepage and `/quote-form`, including accessible errors and submission states.
+- [Validation](./src/requests/QuoteRequestSchema.ts): bounded, Unicode-friendly fields.
+- [Discord transport](./src/webhooks/SendQuoteRequest.ts): direct browser delivery with a timeout and disabled mentions.
+
+## Content and design
+
+Projects and prices are in [Projects](./src/data/Projects.ts) and [Services](./src/data/Services.ts). Videos load after a visitor presses play. Selecting a service prefills the inquiry brief.
+
+FAQ, process copy, navigation, and approved testimonials belong in [content.ts](./src/features/studio/content.ts). Testimonials currently have an explicit empty state; add only approved client quotes.
+
+See [the design guide](./docs/design-system.md) for colors, typography, components, responsive behavior, and accessibility. Fonts use Google Fonts with local fallbacks. The provided logo is retained.
+
+## Verification
+
+Build and lint validate the application. Native Node tests cover creator aliases, field bounds, invalid dates, and reference URL protocols. Browser submission checks should intercept Discord requests to verify 204 success and failed-delivery feedback without sending real messages.

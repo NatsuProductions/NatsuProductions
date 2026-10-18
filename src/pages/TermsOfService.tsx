@@ -1,4 +1,4 @@
-import Closing from "@/components/custom/closing/Closing";
+import Closing from "@/components/ProjectCTA";
 import {
   FileCheck,
   CreditCard,
